@@ -45,11 +45,16 @@ pipeline {
                 bat 'echo Hello, my name is %MY_NAME%, project is %PROJECT%, and Build Number is %BUILD_NUMBER%'  // BUILD_NUMBER is inbuilt env variable 
             }
             //this is to configure webhook
-            
+
         }
         stage('Print Parameters') {
             steps {
                 bat 'echo Hello, my name is %MY_NAME1%, project is %PROJECT1%, environment is %ENVIRONMENT%, and Build Number is %BUILD_NUMBER%'
+            }
+        }
+        stage('Random commit msg') {
+            steps {
+                echo "Random message"
             }
         }
     }
